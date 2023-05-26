@@ -76,7 +76,8 @@ function App() {
             Wij zijn er van op de hoogte dat je uren boven de 24 of onder de 0
             kan hebben. (bv 25:99 of -1:00)
             <br />
-            Dit is een bewuste keuze en zal voor nu niet veranderen.
+            Dit is een bewuste keuze en zal voor nu niet veranderen.µ
+            https://github.com/Copystrike/klok-converter
           </p>
         </section>
         {/* Info */}
