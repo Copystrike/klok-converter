@@ -73,7 +73,7 @@ function App() {
         <section>
           <h1 className="text-1xl font-bold">Informatie</h1>
           <p className="text-sm text-gray-500">
-            Wij zijn er van op de hoogte dat je uuren boven de 24 of onder de 0
+            Wij zijn er van op de hoogte dat je uren boven de 24 of onder de 0
             kan hebben. (bv 25:99 of -1:00)
             <br />
             Dit is een bewuste keuze en zal voor nu niet veranderen.
