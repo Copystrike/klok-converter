@@ -29,14 +29,13 @@ export const patterns: Pattern[] = [
   {
     name: "minuten",
     regex: /^(\d+) minuten$/,
-    handler: ([minutes], params) => `00:${minutes.padStart(2, "0")}`,
+    handler: ([minutes]) => `00:${minutes.padStart(2, "0")}`,
     usage: "5 minuten",
   },
   {
     name: "uur",
     regex: /^(\d+) uur$/,
-    handler: ([hour], params) =>
-      `${hourCorrection(hour, params.isAvond)}:00`,
+    handler: ([hour], params) => `${hourCorrection(hour, params.isAvond)}:00`,
     usage: "5 uur",
   },
   {
@@ -50,8 +49,7 @@ export const patterns: Pattern[] = [
   {
     name: "kwart over",
     regex: /^kwart over (\d+)$/,
-    handler: ([hour], params) =>
-      `${hourCorrection(hour, params.isAvond)}:15`,
+    handler: ([hour], params) => `${hourCorrection(hour, params.isAvond)}:15`,
     usage: "kwart over 5",
   },
   {
@@ -79,9 +77,7 @@ export const patterns: Pattern[] = [
     name: "voor",
     regex: /^(\d+) voor (\d+)$/,
     handler: ([minutes, hour], params) =>
-      `${hourCorrection(hour, params.isAvond) - 1}:${
-        60 - parseInt(minutes)
-      }`,
+      `${hourCorrection(hour, params.isAvond) - 1}:${60 - parseInt(minutes)}`,
     usage: "5 voor 5",
   },
   {
@@ -107,7 +103,7 @@ export const patterns: Pattern[] = [
   {
     name: "nu",
     regex: /^nu$/,
-    handler: ([], params) =>
+    handler: ([]) =>
       new Date().toLocaleTimeString("nl-NL", {
         hour: "2-digit",
         minute: "2-digit",
